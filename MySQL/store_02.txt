@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`%` PROCEDURE `insert_order`(
+ IN p_order_id decimal(20) ,
+ IN p_user_id  decimal(20) ,
+ IN p_eval_set VARCHAR(20) ,
+ IN p_order_number decimal(4) ,
+ IN p_order_dow decimal(4) ,
+ IN p_order_hour_of_day decimal(4) ,
+ IN p_days_since_prior_order decimal(4))
+BEGIN
+	insert into orders values(p_order_id,p_order_id,p_eval_set,p_order_dow,p_order_hour_of_day,p_days_since_prior_order);
+END
